@@ -40,6 +40,7 @@
         
       }
      input[type='submit']{
+       
         width: 100px;
         height: 50px;
         background-color: green;
@@ -58,17 +59,24 @@
 <body>
     <h1><u><b> !!! LOGIN PAGE !!!</b></u></h1> <br><br><br>
     <div class="loginContainer">
-        <form action="">
+        <form action="" method="post">
+          
             <br>
+            <label for="fname">FirstName :</label>
             <input type="text" name="fname" id="fname" placeholder="FirstName" required><br><br>
+            <label for="lname">LastName :</label>
             <input type="text" name="lname" id="lname" placeholder="Last Name" required><br><br>
+            <label for="dob">&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOB:</label>
             <input type="date" name="dob" id="dob" placeholder="YYYY-MM-DD" required><br><br>
+            <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:</label>
             <input type="email" name="email" id="email" placeholder="abc@gmail.com" required><br><br>
-            <input type="password" name="password" id="password" required><br><br>
+            <label for="password">password  :</label>
+            <input type="password" name="password" id="password" placeholder="Password Here" required><br><br>
+
             <input type="submit" value="SUBMIT FORM">
         </form>
         <br>
-        <a href="{% url 'index'%}">Back To Home</a>
+        <a href="{% url 'index'%}">Back To Home</a> <!-- here index is a function name -->
     </div>
 </body>
 </html>
