@@ -1,82 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PAGE-LOGIN</title>
-    <style>
-        *{
-        padding: 0;
-        margin: 0;
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-      }
-       html {
-        height: 100%;
-      }
-      body{
-        height: 100%;
-        background-color: bisque;
-        text-align: center;
-        color: #340808;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .loginContainer{
-        height:500px;
-        width: 60%;
-        background-color: rgb(68, 132, 201);
-        border-radius: 20px;
-       
-      }
-      input{
-        height: 60px;
-        width: 80%;
-        border-radius: 5px;
-        border: none;
-        text-align: center;
-        
-      }
-     input[type='submit']{
-       
-        width: 100px;
-        height: 50px;
-        background-color: green;
-        color: aliceblue;
-     }
-     a{
-      text-decoration: none;
-       color: #802218;
-     }
-     a:hover{
-      color: rgb(207, 201, 34);
-      text-decoration: underline;
-     }
-    </style>
-</head>
-<body>
-    <h1><u><b> !!! LOGIN PAGE !!!</b></u></h1> <br><br><br>
+    <link rel="stylesheet" href="../../static/app1/login.css">
+  </head>
+  <body>
+    <h1>
+      <u><b> !!! LOGIN PAGE !!!</b></u>
+    </h1>
+    <br /><br /><br />
     <div class="loginContainer">
-        <form action="" method="post">
-          
-            <br>
-            <label for="fname">FirstName :</label>
-            <input type="text" name="fname" id="fname" placeholder="FirstName" required><br><br>
-            <label for="lname">LastName :</label>
-            <input type="text" name="lname" id="lname" placeholder="Last Name" required><br><br>
-            <label for="dob">&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOB:</label>
-            <input type="date" name="dob" id="dob" placeholder="YYYY-MM-DD" required><br><br>
-            <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:</label>
-            <input type="email" name="email" id="email" placeholder="abc@gmail.com" required><br><br>
-            <label for="password">password  :</label>
-            <input type="password" name="password" id="password" placeholder="Password Here" required><br><br>
+      <form action="" method="post">
+        {% csrf_token %}
 
-            <input type="submit" value="SUBMIT FORM">
-        </form>
-        <br>
-        <a href="{% url 'index'%}">Back To Home</a> <!-- here index is a function name -->
+        <br />
+        <label for="fname">FirstName :</label>
+        <input
+          type="text"
+          name="fname"
+          id="fname"
+          placeholder="FirstName"
+          required /> <br /><br />
+       
+        <label for="lname">LastName :</label>
+        <input
+          type="text"
+          name="lname"
+          id="lname"
+          placeholder="Last Name"
+          required
+        /><br /><br />
+        <label for="dob"
+          >&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOB:</label
+        >
+        <input
+          type="date"
+          name="dob"
+          id="dob"
+          placeholder="Enter Date Of Birth"
+          required/><br /><br />
+        <label for="email"
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="abc@gmail.com"
+          required/><br /><br />
+        <label for="password">password :</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password Here"
+          required/><br /><br />
+
+        <input class="date-input" type="submit" value="SUBMIT FORM" />
+      </form>
+      <br />
+      <a href="{% url 'index'%}">Back To Home</a>
+      <!-- here index is a function name -->
     </div>
-</body>
+  </body>
 </html>
