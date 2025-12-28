@@ -14,7 +14,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url(../images/background.jpg);
+        /* background-image: url(../images/background.jpg); */
         background-size: cover;/* Makes the background image cover the entire element */
         background-position: center;/* The center of the image is always aligned with the center of the viewport*/
        
